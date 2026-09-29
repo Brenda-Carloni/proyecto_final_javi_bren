@@ -54,9 +54,6 @@ with col3:
 
 st.markdown("---")
 
-st.subheader("⚙️ Machine Learning Workflow")
-
-st.markdown("""""")
 
 st.markdown("---")
 
