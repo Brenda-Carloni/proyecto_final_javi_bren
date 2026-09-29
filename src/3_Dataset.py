@@ -1,11 +1,21 @@
 import streamlit as st
 import pandas as pd
+from pathlib import Path
 
 st.set_page_config(page_title="Dataset", page_icon="📊", layout="wide")
 
 st.title("📊 Student Social Media And Mental Health Impact")
 
-df = pd.read_csv("data/raw/Student Social Media And Mental Health Impact.csv")
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+csv_path = (
+    BASE_DIR
+    / "data"
+    / "raw"
+    / "Student Social Media And Mental Health Impact.csv"
+)
+
+df = pd.read_csv(csv_path)
 
 st.subheader("Vista Previa del Conjunto de Datos")
 st.dataframe(df, use_container_width=True)
