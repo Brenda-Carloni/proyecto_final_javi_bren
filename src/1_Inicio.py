@@ -55,9 +55,6 @@ with col3:
 st.markdown("---")
 
 
-st.markdown("---")
-
-
 st.subheader("📌 Entendiendo la Predicción")
 
 st.info("""
