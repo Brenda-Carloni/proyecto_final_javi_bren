@@ -4,6 +4,23 @@ from pathlib import Path
 
 st.set_page_config(page_title="Dataset", page_icon="📊", layout="wide")
 
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #FCF4F0;
+    }
+    header[data-testid="stHeader"] {
+        background-color: transparent;
+    }
+    section[data-testid="stSidebar"] {
+        background-color: #FAE1F0;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.title("📊 Student Social Media And Mental Health Impact")
 
 BASE_DIR = Path(__file__).resolve().parent.parent

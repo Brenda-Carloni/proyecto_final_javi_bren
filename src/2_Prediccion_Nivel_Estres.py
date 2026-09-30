@@ -17,6 +17,50 @@ clases = {
     "3": "Muy Alto"
 }
 
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #FCF4F0;
+        --primary-color: #D87093 !important; /* Cambiado a un rosa con más contraste para probar */
+    }
+    header[data-testid="stHeader"] {
+        background-color: transparent;
+    }
+    section[data-testid="stSidebar"] {
+        background-color: #FAE1F0;
+    }
+    div[data-baseweb="slider"] [role="slider"] {
+        background-color: #D87093 !important;
+        border-color: #D87093 !important;
+        box-shadow: none !important;
+    }
+    div[data-baseweb="slider"] div[data-testid="stSliderTrack"] > div {
+        background-color: #D87093 !important;
+    }
+    div[data-testid="stSlider"] div[data-testid="stMarkdownContainer"] p {
+        color: #D87093 !important;
+    }div.stButton > button {
+        background-color: #D87093 !important; /* Color de fondo del botón */
+        color: #FFFFFF !important;            /* Color del texto del botón */
+        border: 1px solid #D87093 !important; /* Color del borde */
+        border-radius: 8px !important;        /* Bordes redondeados */
+        font-weight: bold !important;         /* Texto en negrita */
+    }
+    div.stButton > button:hover {
+        background-color: #C75B80 !important;
+        border-color: #C75B80 !important;
+        color: #FFFFFF !important;
+    }
+    div.stButton > button:active {
+        background-color: #B5476E !important;
+        color: #FFFFFF !important;
+    
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.title("🧠 Sistema de Predicción de Nivel de Estrés")
 st.write("Completa la información del estudiante a continuación.")
 st.divider()
@@ -47,10 +91,10 @@ if st.button("🔍 Predecir Nivel de Estrés", use_container_width=True):
     st.subheader("🧠 Resultados de la Predicción")
     
     if prediccion == "0": 
-        st.success("El nivel de estrés del estudiante es Bajo. Esto indica que el estudiante tiene un buen manejo del estrés y está en un estado emocional saludable.")
+        st.success("💚 El nivel de estrés del estudiante es **BAJO**. \n\n Esto indica que el estudiante tiene un buen manejo del estrés y está en un estado emocional saludable.")
     elif prediccion == "1":  # Medio (Azul/Informativo)
-        st.warning("El nivel de estrés del estudiante es Medio. Se recomienda mantener un equilibrio entre el trabajo y el descanso.")
+        st.warning("⚠️ El nivel de estrés del estudiante es **MEDIO**. \n\n Se recomienda mantener un equilibrio entre el trabajo y el descanso.")
     elif prediccion == "2":  # Alto (Naranja/Advertencia)
-        st.error("El nivel de estrés del estudiante es Alto. Es importante que busque apoyo y tome medidas para reducir el estrés.")
+        st.error("🚨 El nivel de estrés del estudiante es **ALTO**. \n\n Es importante que busque apoyo y tome medidas para reducir el estrés.")
     elif prediccion == "3":  # Muy Alto (Rojo/Error)
-        st.error("El nivel de estrés del estudiante es Muy Alto. Es fundamental que busque apoyo profesional y tome medidas inmediatas para gestionar el estrés.")
+        st.error("🚨 El nivel de estrés del estudiante es **MUY ALTO**. \n\n Es fundamental que busque apoyo profesional y tome medidas inmediatas para gestionar el estrés.")

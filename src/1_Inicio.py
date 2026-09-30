@@ -1,5 +1,22 @@
 import streamlit as st
 
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #FCF4F0;
+    }
+    header[data-testid="stHeader"] {
+        background-color: transparent;
+    }
+    section[data-testid="stSidebar"] {
+        background-color: #FAE1F0;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.title("🧠 Sistema de Predicción de Nivel de Estrés")
 
 st.markdown("---")

@@ -6,6 +6,23 @@ st.set_page_config(
     layout="wide"
 )
 
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #FCF4F0;
+    }
+    header[data-testid="stHeader"] {
+        background-color: transparent;
+    }
+    section[data-testid="stSidebar"] {
+        background-color: #FAE1F0;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.title("ℹ️ Acerca del Proyecto")
 st.markdown("---")
 
