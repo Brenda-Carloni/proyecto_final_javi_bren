@@ -22,7 +22,7 @@ st.markdown(
     <style>
     .stApp {
         background-color: #FCF4F0;
-        --primary-color: #D87093 !important; /* Cambiado a un rosa con más contraste para probar */
+        --primary-color: #D87093 !important;
     }
     header[data-testid="stHeader"] {
         background-color: transparent;
@@ -40,7 +40,8 @@ st.markdown(
     }
     div[data-testid="stSlider"] div[data-testid="stMarkdownContainer"] p {
         color: #D87093 !important;
-    }div.stButton > button {
+    }
+    div.stButton > button {
         background-color: #D87093 !important; /* Color de fondo del botón */
         color: #FFFFFF !important;            /* Color del texto del botón */
         border: 1px solid #D87093 !important; /* Color del borde */
@@ -69,17 +70,17 @@ st.subheader("👤 Información del Estudiante")
 c1, c2 = st.columns(2)
 
 with c1:
-    Horas_Diarias_Promedio_de_Pantalla = st.slider("Horas Promedio de Pantalla", min_value = 0.0, max_value = 24.0, step = 0.1)
+    Horas_Diarias_Promedio_de_RRSS = st.slider("Horas Diarias Promedio de RRSS", min_value = 0.0, max_value = 24.0, step = 0.1)
     Horas_Diarias_Promedio_de_Estudio = st.slider("Horas Diarias Promedio de Estudio", min_value = 0.0, max_value = 24.0, step = 0.1)
     Horas_Diarias_Promedio_de_Actividad_Física = st.slider("Horas Diarias Promedio de Actividad Física", min_value = 0.0, max_value = 24.0, step = 0.1)
     Horas_Diarias_Promedio_de_Sueño_Por_Noche = st.slider("Horas Diarias Promedio de Sueño Por Noche", min_value = 0.0, max_value = 24.0, step = 0.1)
-    Puntaje_de_Salud_Mental = st.slider("Puntaje de Salud Mental", min_value = 0.0, max_value = 10.0, step = 0.1)
+    Puntaje_de_Salud_Mental = st.slider("Percepción de Salud Mental (puntaje de 0 a 10)", min_value = 0.0, max_value = 10.0, step = 0.1)
 
 
 st.divider()
 
 if st.button("🔍 Predecir Nivel de Estrés", use_container_width=True):
-    prediccion = str(modelo.predict([[Horas_Diarias_Promedio_de_Pantalla,
+    prediccion = str(modelo.predict([[Horas_Diarias_Promedio_de_RRSS,
                                       Horas_Diarias_Promedio_de_Estudio,
                                       Horas_Diarias_Promedio_de_Actividad_Física,
                                       Horas_Diarias_Promedio_de_Sueño_Por_Noche,

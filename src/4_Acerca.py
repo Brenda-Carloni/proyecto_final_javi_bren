@@ -29,7 +29,7 @@ st.markdown("---")
 st.markdown("""
 ## 🧠 Sistema de Predicción de Nivel de Estrés
 
-Bienvenido al **Sistema de Predicción de Nivel de Estrés**, un proyecto de Machine Learning de extremo a extremo 
+El **Sistema de Predicción de Nivel de Estrés** es un proyecto de Machine Learning de extremo a extremo 
 desarrollado para demostrar habilidades prácticas en Análisis de Datos, Ingeniería de Datos, Machine Learning,
 Inteligencia de Negocios y Desarrollo de Aplicaciones Web.
 

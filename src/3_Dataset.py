@@ -16,6 +16,21 @@ st.markdown(
     section[data-testid="stSidebar"] {
         background-color: #FAE1F0;
     }
+    div.stButton > button {
+        background-color: #D87093 !important; /* Color de fondo del botón */
+        color: #FFFFFF !important;            /* Color del texto del botón */
+        border: 1px solid #D87093 !important; /* Color del borde */
+        border-radius: 8px !important;        /* Bordes redondeados */
+        font-weight: bold !important;         /* Texto en negrita */
+    }
+    div.stButton > button:hover {
+        background-color: #C75B80 !important;
+        border-color: #C75B80 !important;
+        color: #FFFFFF !important;
+    }
+    div.stButton > button:active {
+        background-color: #B5476E !important;
+        color: #FFFFFF !important;
     </style>
     """,
     unsafe_allow_html=True

@@ -56,17 +56,17 @@ with col2:
 st.markdown("---")
 
 
-st.subheader("📚 Información del Estudiante Utilizada")
+st.subheader("📚 Información del Estudiante Utilizada para la predicción")
 
 col3, col4 = st.columns(2)
 
 with col3:
     st.write("""
-- Horas Diarias Promedio de Pantalla
+- Horas Diarias Promedio en RRSS
 - Horas Diarias Promedio de Estudio
 - Horas Diarias Promedio de Actividad Física
 - Horas Diarias Promedio de Sueño
-- Puntaje de Salud Mental
+- Percepción del Puntaje de Salud Mental
 """)
 
 st.markdown("---")
