@@ -92,10 +92,10 @@ if st.button("🔍 Predecir Nivel de Estrés", use_container_width=True):
     st.subheader("🧠 Resultados de la Predicción")
     
     if prediccion == "0": 
-        st.success("💚 El nivel de estrés del estudiante es **BAJO**. \n\n Esto indica que el estudiante tiene un buen manejo del estrés y está en un estado emocional saludable.")
+        st.success("💚 El nivel de estrés del estudiante es **BAJO**. \n\n Esto indica que el estudiante tiene un buen manejo del estrés y está en un estado emocional saludable. Los resultados sugieren un nivel de estrés reducido, asociado a una situación en la que podría existir un buen equilibrio entre las actividades académicas, el descanso y el bienestar personal. Se recomienda mantener estos hábitos y continuar prestamdo atención al equilibrio entre estudio, descanso y tiempo personal.")
     elif prediccion == "1":  # Medio (Azul/Informativo)
-        st.warning("⚠️ El nivel de estrés del estudiante es **MEDIO**. \n\n Se recomienda mantener un equilibrio entre el trabajo y el descanso.")
+        st.warning("⚠️ El nivel de estrés del estudiante es **MEDIO**. \n\n Los resultados sugieren la presencia de un nivel de estrés moderado, que puede estar relacionado con las exigencias académicas y las actividades cotidianas. Se recomienda mantener una adecuada organización del tiempo, procurar un descanso suficiente y reservar momentos para actividades de recreación y bienestar personal.")
     elif prediccion == "2":  # Alto (Naranja/Advertencia)
-        st.error("🚨 El nivel de estrés del estudiante es **ALTO**. \n\n Es importante que busque apoyo y tome medidas para reducir el estrés.")
+        st.error("🚨 El nivel de estrés del estudiante es **ALTO**. \n\n Los resultados indican una mayor presencia de factores asociados al estrés. Puede ser útil revisar los hábitos de estudio, descanso y actividad física diaria, así como identificar aquellas situaciones que puedan estar generando mayor presión. Si este nivel de estrés se mantiene o afecta el bienestar cotidiano, se recomienda considerar la posibilidad de buscar orientación o apoyo.")
     elif prediccion == "3":  # Muy Alto (Rojo/Error)
-        st.error("🚨 El nivel de estrés del estudiante es **MUY ALTO**. \n\n Es fundamental que busque apoyo profesional y tome medidas inmediatas para gestionar el estrés.")
+        st.error("🚨 El nivel de estrés del estudiante es **MUY ALTO**. \n\n Los resultados indican una presencia elevada de factores asociados al estrés. Se recomienda prestar especial atención al bienestar personal, revisar las demandas académicas y cotidianas y procurar espacios adecuados de descanso y recuperación. Si la situación genera malestar persistente o interfiere con la vida cotidiana, puede ser conveniente buscar orientación de un profesional de la salud.")
